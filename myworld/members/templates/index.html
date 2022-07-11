@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+</head>
+<body>
+    <h1>this is members list</h1>
+    <table border="1">
+        {% for i in mymembers %}
+        <tr>
+            <td><a href="update/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+            <td><a href="delete/{{ i.id }}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>
+        <a href="add/">Add Member</a>
+    </p>
+</body>
+</html>
